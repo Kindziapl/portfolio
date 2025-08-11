@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lugrasimo } from "next/font/google";
+import { Geist, Geist_Mono, Lugrasimo, Inknut_Antiqua } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,6 +16,10 @@ const lugarismo = Lugrasimo({
   weight: "400",
 });
 
+const inknutAntiqua = Inknut_Antiqua({
+  weight: "300",
+});
+
 export const metadata: Metadata = {
   title: "Kindziapl Workshop",
   description: "My portfolio",
@@ -28,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lugarismo}`}>{children}</body>
+      <body className={`${lugarismo} `}>{children}</body>
     </html>
   );
 }
