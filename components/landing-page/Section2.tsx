@@ -23,7 +23,7 @@ const Section2 = () => {
           </span>
 
           <span className="text-head pt-20 pb-5">Click for the progress:</span>
-          <div className="w-full flax flex-row gap-2">
+          <div className="w-full flex flex-row gap-2">
             <Button variant="default" size="lg">
               Skirt
             </Button>
