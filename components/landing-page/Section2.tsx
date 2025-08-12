@@ -1,50 +1,95 @@
-import Image from "next/image";
 import React from "react";
-import { Button } from "../ui/button";
+import SectionLayout1 from "../custom-compontnts/SectionLayout1";
+
+const mojeinfo: InfoType[] = [
+  {
+    type: "Cosplay",
+    title: "Star Guardian Xayah",
+    subtitle: "(League of Legends)",
+    date: "2020",
+    materials: "Eva foam, textyles, faux-fur",
+    techniques: "Sewing, foam carving, airbrush painting",
+    imgSrc: "/assets/pictures/xayah-pic-1.jpg",
+    visualInfluence: [
+      "/assets/pictures/xayah-ref-1.jpg",
+      "/assets/pictures/xayah-ref-2.jpg",
+    ],
+    buttons: ["Skirt", "Ears", "Feathers"],
+  },
+  {
+    type: "Cosplay",
+    title: "Hiryuu (retrofit)",
+    subtitle: "(Azur Lane)",
+    date: "2021",
+    materials: "Eva foam, textyles, faux-fur, worbla",
+    techniques: "Sewing, foam carving, airbrush painting, 3d&nbsp;modeling",
+    imgSrc: "/assets/pictures/xayah.jpg",
+    visualInfluence: [
+      "/assets/pictures/hiryuu-ref-1.jpg",
+      "/assets/pictures/hiryuu-ref-2.jpg",
+    ],
+    buttons: ["Wig", "Ears", "Cape"],
+  },
+  {
+    type: "Cosplay",
+    title: "Blood Moon Sivir",
+    subtitle: "(League of Legends)",
+    date: "2019",
+    materials: "Eva foam, textyles",
+    techniques: "Sewing, foam carving, airbrush painting",
+    imgSrc: "/assets/pictures/xayah.jpg",
+    visualInfluence: [
+      "/assets/pictures/sivir-ref-1.jpg",
+      "/assets/pictures/sivir-ref-2.jpg",
+    ],
+    buttons: ["Mask", "Weapon"],
+  },
+  {
+    type: "Cosplay",
+    title: "FFNF Richelieu",
+    subtitle: "(Azur Lane)",
+    date: "2022",
+    materials: "Eva foam, textyles, PLA",
+    techniques: "Sewing, foam carving, 3d modeling, wig&nbsp;styling",
+    imgSrc: "/assets/pictures/xayah.jpg",
+    visualInfluence: [
+      "/assets/pictures/richelieu-ref-1.jpg",
+      "/assets/pictures/richelieu-ref-2.jpg",
+    ],
+    buttons: ["Wig", "Flag"],
+  },
+  {
+    type: "Cosplay",
+    title: "Pestonya Shortcake Wanko",
+    subtitle: "(Overlord)",
+    date: "2025",
+    materials: "Eva foam, textyles, PLA, faux fur",
+    techniques: "Sewing, foam carving, 3d modeling, wig&nbsp;styling, corset ",
+    imgSrc: "/assets/pictures/xayah.jpg",
+    visualInfluence: [
+      "/assets/pictures/pestonya-ref-1.jpg",
+      "/assets/pictures/pestonya-ref-2.jpg",
+    ],
+    buttons: ["Head", "Corset", "Sewing"],
+  },
+];
+
+export type InfoType = {
+  type: "Cosplay" | "Inne";
+  title: string;
+  subtitle: string;
+  date: string;
+  materials: string;
+  techniques: string;
+  imgSrc: string;
+  visualInfluence: string[];
+  buttons: string[];
+};
 
 const Section2 = () => {
   return (
     <>
-      <div className="section-layout">
-        <div className="w-2/5 h-full flex flex-col float-left text-txt text-2xl py-10">
-          <span className="text-info">Cosplay</span>
-          <span className="text-primary text-4xl">
-            Star Guardian Xayah <br />
-          </span>
-          <span className="text-txt text-4xl">(League of Legends)</span>
-          <span className="text-head"> Date: </span>
-          <span className="text-info"> 2021</span>
-          <span className="text-head"> Materials used: </span>
-          <span className="text-info"> Eva foam, textyles, faux-fur</span>
-          <span className="text-head"> Techniques used: </span>
-          <span className="text-info">
-            {" "}
-            Sewing, foam carving, airbrush painting
-          </span>
-
-          <span className="text-head pt-20 pb-5">Click for the progress:</span>
-          <div className="w-full flex flex-row gap-2">
-            <Button variant="default" size="lg">
-              Skirt
-            </Button>
-            <Button variant="default" size="lg">
-              Ears
-            </Button>
-            <Button variant="default" size="lg">
-              Feathers
-            </Button>
-          </div>
-        </div>
-
-        <Image
-          src="/assets/pictures/xayah.jpg"
-          width={574}
-          height={717}
-          alt="no nie pykło xd"
-          className=""
-        />
-      </div>
-      <div className="w-full bg-secondary h-[25px]"></div>
+      <SectionLayout1 data={mojeinfo} />
     </>
   );
 };
