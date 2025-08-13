@@ -6,21 +6,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-      <section>
-        <Section1 />
-      </section>
+    <main className="flex flex-col gap-0">
+      <Section1 />
 
-      <section>
-        <div className="w-full h-[100px] flex bg-secondary text-4xl text-txt items-center px-20">
-          {" "}
-          My projects{" "}
-        </div>
-      </section>
+      <div className="w-full h-[100px] flex bg-secondary text-4xl text-txt items-center px-20">
+        {" "}
+        My projects{" "}
+      </div>
 
-      <section>
-        <Section2 />
-      </section>
-    </>
+      <Section2 />
+    </main>
   );
 }
