@@ -34,7 +34,7 @@ body {
 }
 
 @utility section-layout {
-  @apply w-full h-[700px] bg-background flex flex-row justify-between px-[200px];
+  @apply w-full lg:min-h-[700px] bg-background flex lg:flex-row md:flex-wrap lg:flex-nowrap md:items-center md:justify-center lg:justify-between md:px-20 lg:px-[150px];
 }
 
 @theme inline {

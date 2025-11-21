@@ -63,14 +63,14 @@ const SectionLayout1 = ({ data }: { data: InfoType[] }) => {
                 width={574}
                 height={717}
                 alt="no nie pykło xd"
-                className="w-[250px] rounded-2xl mt-[70px] -ml-3 border-3 border-primary z-10"
+                className="max-w-[250px] rounded-2xl mt-[70px] -ml-3 border-3 border-primary z-10"
               />
               <Image
                 src={item.visualInfluence[1]}
                 width={574}
                 height={717}
                 alt="no nie pykło xd"
-                className="w-[150px] rounded-2xl -mt-[100px] ml-[150px] border-2 border-primary opacity-50"
+                className="max-w-[150px] rounded-2xl -mt-[100px] ml-[150px] border-2 border-primary opacity-50"
               />
             </div>
 
@@ -79,7 +79,7 @@ const SectionLayout1 = ({ data }: { data: InfoType[] }) => {
               width={574}
               height={717}
               alt="no nie pykło xd"
-              className=""
+              className="w-full h-fit pl-5"
             />
           </div>
           <div className="w-full bg-secondary h-[25px]"></div>
