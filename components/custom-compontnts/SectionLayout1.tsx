@@ -77,10 +77,10 @@ const SectionLayout1 = ({ data }: { data: InfoType[] }) => {
 
             <Image
               src={item.imgSrc}
-              width={574}
-              height={717}
+              width={1000}
+              height={1000}
               alt="no nie pykło xd"
-              className="w-full h-fit pl-5"
+              className="max-w-[600px] h-full pl-5"
             />
           </div>
           <div className="w-full bg-secondary h-[25px]"></div>
