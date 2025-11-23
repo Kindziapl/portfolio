@@ -7,6 +7,7 @@ import DOMPurify from "isomorphic-dompurify";
 
 const inknutAntiqua = Inknut_Antiqua({
   weight: "300",
+  subsets: ["latin"],
 });
 
 const SectionLayout1 = ({ data }: { data: InfoType[] }) => {

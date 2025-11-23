@@ -4,10 +4,12 @@ import "./globals.css";
 
 const lugarismo = Lugrasimo({
   weight: "400",
+  subsets: ["latin"],
 });
 
 const inknutAntiqua = Inknut_Antiqua({
   weight: "300",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
