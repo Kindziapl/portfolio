@@ -24,7 +24,7 @@ const Section1 = () => {
           </h3>
           <div className="text-center px-10 ">
             <h2 className="text-primary text-2xl">
-              IT professional by day cosplayer by night.
+              IT professional by day cosplayer by night
             </h2>
             <h2 className="text-txt text-2xl -mt-8 font-[inknutAntiqua]">
               <br />
