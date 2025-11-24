@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lugrasimo, Inknut_Antiqua } from "next/font/google";
+// @ts-ignore: side-effect CSS import declaration missing in TS types
 import "./globals.css";
 
 const lugarismo = Lugrasimo({

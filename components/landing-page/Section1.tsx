@@ -6,7 +6,7 @@ const Section1 = () => {
   return (
     <div className="w-full h-svh flex flex-row justify-center items-center font-heading font-size-3xl overflow-hidden relative">
       <Image
-        src="/assets/background/bg-image.jpg"
+        src="./assets/background/bg-image.jpg"
         width={1730}
         height={1177}
         alt=""
