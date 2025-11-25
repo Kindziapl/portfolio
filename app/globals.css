@@ -12,16 +12,20 @@ body {
   --color-accent: #e85bbb;
   --color-background: #faf2f7;
   --color-txt: #11080e;
-  --color-poop: brown;
+
   --radius: 100px;
+  --ring: #e582c6;
+
+  --color-primary-d: #b297d8;
+  --color-secondary-d: #6a2b73;
+  --color-accent-d: #bc4ebd;
+  --color-background-d: #100a1b;
+  --color-txt-d: #e9e2f4;
 }
 
 @layer components {
   .card {
     @apply m-10 rounded-lg bg-secondary px-6 py-8 shadow-xl ring-1 ring-slate-900/5;
-  }
-  .poopy {
-    @apply text-poop;
   }
 }
 
@@ -29,8 +33,16 @@ body {
   @apply text-primary text-3xl pt-5;
 }
 
+@utility text-head-d {
+  @apply text-primary-d font-bold text-3xl pt-5;
+}
+
 @utility text-info {
   @apply text-txt text-2xl;
+}
+
+@utility text-info-d {
+  @apply text-txt-d text-2xl;
 }
 
 @utility section-layout {

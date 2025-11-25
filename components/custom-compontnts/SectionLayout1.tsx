@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
-import { InfoType } from "../landing-page/Section2";
+import { InfoType } from "../page-cosplay/Section2";
 import { Inknut_Antiqua } from "next/font/google";
 import DOMPurify from "isomorphic-dompurify";
 
