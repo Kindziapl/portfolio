@@ -14,13 +14,9 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [persona, setPersona] = useState(true);
 
-  // useEffect(() => {
-  //   setPersona(!persona);
-  // }, [persona]);
-
   return (
     <main className="w-full h-full m-0 p-0 flex flex-col relative gap-0">
-      <div className="w-[300px] h-20 z-20 absolute top-0 right-0">
+      <div className="w-[300px] h-20 z-20 fixed top-0 right-0">
         <div className="w-full h-full flex flex-row items-center justify-end p-3 gap-2">
           <Label
             className={cn(

@@ -1,6 +1,18 @@
 import React from "react";
 import SectionLayout1 from "../custom-compontnts/SectionLayout1";
 
+export type InfoType = {
+  type: "Cosplay" | "Inne";
+  title: string;
+  subtitle: string;
+  date: string;
+  materials: string;
+  techniques: string;
+  imgSrc: string;
+  visualInfluence: string[];
+  buttons: string[];
+};
+
 const mojeinfo: InfoType[] = [
   {
     type: "Cosplay",
@@ -73,18 +85,6 @@ const mojeinfo: InfoType[] = [
     buttons: ["Head", "Corset", "Sewing"],
   },
 ];
-
-export type InfoType = {
-  type: "Cosplay" | "Inne";
-  title: string;
-  subtitle: string;
-  date: string;
-  materials: string;
-  techniques: string;
-  imgSrc: string;
-  visualInfluence: string[];
-  buttons: string[];
-};
 
 const Section2 = () => {
   return (
