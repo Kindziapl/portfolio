@@ -58,8 +58,9 @@ const games: gamesInfo[] = [
     date: "2025",
     place: "Katowice, Śląskie, Polska",
     time: "48h",
+    link: "https://kindziapl.itch.io/packout",
     image: {
-      src: "./assets/placeholder.png",
+      src: "./assets/it/pictures/PackOut.png",
       alt: "TBD",
     },
   },

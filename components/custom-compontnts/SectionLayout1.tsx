@@ -1,9 +1,10 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { InfoType } from "../page-cosplay/Section2";
 import { Inknut_Antiqua } from "next/font/google";
 import DOMPurify from "isomorphic-dompurify";
+import { GalleryModal } from "./GalleryModal";
 
 const inknutAntiqua = Inknut_Antiqua({
   weight: "300",
@@ -11,6 +12,36 @@ const inknutAntiqua = Inknut_Antiqua({
 });
 
 const SectionLayout1 = ({ data }: { data: InfoType[] }) => {
+  const [pictureOneNumber, setPictureOneNumber] = useState(0);
+  const [pictureTwoNumber, setPictureTwoNumber] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const changePictureNumber = (index: number) => {
+    if (pictureOneNumber == 0) {
+      setPictureOneNumber(1);
+      setPictureTwoNumber(0);
+    } else if (pictureOneNumber == 1) {
+      setPictureOneNumber(0);
+      setPictureTwoNumber(1);
+    }
+  };
+
+  const openGallery = () => {
+    setIsModalOpen(true);
+  };
+  const handleNavigate = (direction: "prev" | "next" | number) => {
+    if (typeof direction === "number") {
+      setCurrentImageIndex(direction);
+    } else if (direction === "next" && currentImageIndex < 0) {
+      setCurrentImageIndex(currentImageIndex + 1);
+    } else if (direction === "prev" && currentImageIndex > 0) {
+      setCurrentImageIndex(currentImageIndex - 1);
+    }
+  };
+
+  useEffect(() => {});
+
   return (
     <>
       {data.map((item, index) => (
@@ -60,17 +91,18 @@ const SectionLayout1 = ({ data }: { data: InfoType[] }) => {
             </div>
             <div className="w-full h-full flex flex-col">
               <Image
-                src={item.visualInfluence[0]}
+                onClick={() => changePictureNumber(index)}
+                src={item.visualInfluence[pictureOneNumber]}
                 width={574}
                 height={717}
-                alt="no nie pykło xd"
+                alt="reference picture 1"
                 className="max-w-[250px] rounded-2xl mt-[70px] -ml-3 border-3 border-primary z-10"
               />
               <Image
-                src={item.visualInfluence[1]}
+                src={item.visualInfluence[pictureTwoNumber]}
                 width={574}
                 height={717}
-                alt="no nie pykło xd"
+                alt="reference picture 2"
                 className="max-w-[150px] rounded-2xl -mt-[100px] ml-[150px] border-2 border-primary opacity-50"
               />
             </div>
@@ -79,11 +111,19 @@ const SectionLayout1 = ({ data }: { data: InfoType[] }) => {
               src={item.imgSrc}
               width={1000}
               height={1000}
-              alt="no nie pykło xd"
+              alt="cosplay photo"
               className="max-w-[600px] h-full pl-5"
             />
           </div>
           <div className="w-full bg-secondary h-[25px]"></div>
+          {isModalOpen && (
+            <GalleryModal
+              images={[]}
+              currentIndex={1}
+              onClose={() => setIsModalOpen(false)}
+              onNavigate={handleNavigate}
+            />
+          )}
         </div>
       ))}
     </>
