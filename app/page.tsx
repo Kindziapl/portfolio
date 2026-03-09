@@ -26,7 +26,7 @@ export default function Home() {
             )}
           >
             {" "}
-            Click for{" "}
+            Switch to{" "}
             <span
               className={cn(
                 persona == true ? "text-primary" : "text-primary-d"
